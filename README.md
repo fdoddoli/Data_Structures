@@ -36,3 +36,22 @@ Implementing a BST to solve a problem of this nature is not efficient. This is b
 
 **Conclusion**
 One way to detect if a network is infected is by storing important information through a data structure, such as a splay tree, which enables efficient searches to detect malicious accesses. For example, a DDoS cyber-attack, where many bots from various devices connected to the internet overwhelm the servers of a product or service, causing them to malfunction due to an avalanche of accesses, can be easily detected through a splay tree because the devices causing the attack can be quickly identified. This is because if there is a cyber-attack by bots, the malicious accesses will be the ones accessing the network most frequently and will be located at higher levels of the tree. This is important because it means that if we want to detect if a network is infected, we can do it quickly and efficiently.
+
+# Act 4.3 
+
+**Introduction**
+In this activity, I analyze the benefits of using a graph to solve a problem similar to the one in activity 4.3.
+
+**Development**
+Implementing a directed graph to solve a problem of this nature is efficient because we can store the data in an adjacency list organized by the source IP address using an unordered_map. This way, we can store the source IP as the key value, its corresponding index in the adjacency list, and its outdegree as a pair in the unordered_map's map value. This is important because it makes our program very efficient, as the complexity of storing the data in an adjacency list is O(|V|+|E|), and the use of an unordered_map is O(1). In addition to the fact that using a graph as a data structure is an efficient strategy for solving problems of this nature, utilizing an unordered_map, where a pair is the map value and the second value is the number of outdegrees, allows us to easily determine which IPs are infecting the network.
+
+**Conclusion**
+One way to detect which IPs are infecting the network is by analyzing which IPs have the highest number of outdegrees, i.e., which IPs are pointing to the most IPs. For example, a DDoS cyber attack, where many bots from various devices connected to the internet overload servers of a product or service with a flood of requests, can be easily detected through a directed graph stored in an adjacency list because the nodes causing the attack can be quickly identified. This is possible because if there is a cyber attack from bots, the malicious accesses will be the nodes with the highest number of outdegrees, i.e., those pointing to the highest number of nodes. This is important because it means that if we want to detect which IPs are attacking the network, we can do so quickly and efficiently with a complexity of O(n).
+
+# Act 5.2
+
+**Introduction**
+In this reflection, I analyze the importance and efficiency of using hash tables, a type of data structure, to solve a problem like the one in activity 5.2.
+
+**Development and Conclusion**
+For this activity, we were asked to use a hash table to store data and, given an IP, retrieve the associated value and display the information in a suitable way. We were able to accomplish this by using an unordered_map to represent our hash table, where we used the IP as the key value and the value as a vector of a struct type called "Registro" that stored the summary of the IP. Additionally, we used the C++ function "push_back()" when reading the file to properly insert the data into the unordered_map. This is important because it allowed us to solve the problem very efficiently. For example, our methods for loading the data into the unordered_map, retrieving and displaying the number of accesses for a given IP are all of linear complexity. Furthermore, our method for displaying the summary of the value associated with the IP is constant. All of this is crucial because it demonstrates that using an unordered_map as a hash table is an excellent solution for solving this type of problem where we need to store and search information quickly.
